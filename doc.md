@@ -1,10 +1,8 @@
-
-
-START set scores to 0 for player and computer and round counter to 0
-
 GET random choice of Rock-Papper-Scissors for computer
 
 PROMPT player for Rock-Papper-Scissors choice
+
+START set scores to 0 for player and computer and round counter to 0
 
 COMPARE player choice to computer selection
 

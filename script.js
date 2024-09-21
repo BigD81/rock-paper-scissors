@@ -6,9 +6,10 @@
 
 
 
-//Generates random number between 0 - 2
+//Generates random num to choose rock-papper-scissors
 function getComputerChoice() {
-    let comptuer = Math.floor(Math.random() * 3);
+    const choice = ["Rock", "Papper", "Scissors"];
+    let comptuer = choice[Math.floor(Math.random() * 3)];
     return comptuer;
 };
 

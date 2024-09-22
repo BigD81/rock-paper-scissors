@@ -22,6 +22,8 @@ function getHumanChoice() {
 
 }
 
+// main logic, takes human choice and computer choice and determines
+// the winner and updates the scores
 function playRound(humanChoice, computerChoice) {
     console.log(computerChoice);
     if (humanChoice === 'ROCK') {
@@ -30,10 +32,12 @@ function playRound(humanChoice, computerChoice) {
         }
 
         else if (computerChoice === 'PAPER') {
+            computerScore++;
             return console.log("You lose, paper beats rock.");
         }
         else {
-            console.log("You WIN!, rock beats scissors.");
+            humanScore++;
+            return console.log("You WIN!, rock beats scissors.");
         }
     }
 
@@ -43,10 +47,12 @@ function playRound(humanChoice, computerChoice) {
         }
 
         else if (computerChoice === 'SCISSORS') {
+            computerScore++;
             return console.log("You lose, scissors beats paper.");
         }
         else {
-            console.log("You WIN!, paper beats rock.");
+            humanScore++;
+            return console.log("You WIN!, paper beats rock.");
         }
     }
 
@@ -56,15 +62,21 @@ function playRound(humanChoice, computerChoice) {
         }
 
         else if (computerChoice === 'ROCK') {
+            computerScore++;
             return console.log("You lose, rock beats scissors");
         }
         else {
-            console.log("You WIN!, scissors beats paper.");
+            humanScore++;
+            return console.log("You WIN!, scissors beats paper.");
         }
     }
 }
 
+// stores the human choice and computer choice
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
+
 playRound(humanSelection, computerSelection);
+console.log(humanScore);
+console.log(computerScore);

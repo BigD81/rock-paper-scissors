@@ -1,5 +1,6 @@
 //START set scores to 0 for player and computer and round counter to 0
-
+let humanScore = 0;
+let computerScore = 0;
 
 //Generates random num to choose rock-papper-scissors
 function getComputerChoice() {

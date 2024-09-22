@@ -1,6 +1,6 @@
-GET random choice of Rock-Papper-Scissors for computer
+GET random choice of Rock-Paper-Scissors for computer
 
-PROMPT player for Rock-Papper-Scissors choice
+PROMPT player for Rock-Paper-Scissors choice
 
 START set scores to 0 for player and computer and round counter to 0
 

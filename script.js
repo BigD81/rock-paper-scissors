@@ -25,7 +25,6 @@ function getHumanChoice() {
 // main logic, takes human choice and computer choice and determines
 // the winner and updates the scores
 function playRound(humanChoice, computerChoice) {
-    console.log(computerChoice);
     if (humanChoice === 'ROCK') {
         if (computerChoice === 'ROCK') {
             return console.log("It's a draw");
@@ -33,11 +32,11 @@ function playRound(humanChoice, computerChoice) {
 
         else if (computerChoice === 'PAPER') {
             computerScore++;
-            return console.log("You lose, paper beats rock.");
+            return console.log("You lose, paper beats rock");
         }
         else {
             humanScore++;
-            return console.log("You WIN!, rock beats scissors.");
+            return console.log("You WIN!, rock beats scissors");
         }
     }
 
@@ -48,11 +47,11 @@ function playRound(humanChoice, computerChoice) {
 
         else if (computerChoice === 'SCISSORS') {
             computerScore++;
-            return console.log("You lose, scissors beats paper.");
+            return console.log("You lose, scissors beats paper");
         }
         else {
             humanScore++;
-            return console.log("You WIN!, paper beats rock.");
+            return console.log("You WIN!, paper beats rock");
         }
     }
 
@@ -67,16 +66,34 @@ function playRound(humanChoice, computerChoice) {
         }
         else {
             humanScore++;
-            return console.log("You WIN!, scissors beats paper.");
+            return console.log("You WIN!, scissors beats paper");
         }
     }
 }
 
-// stores the human choice and computer choice
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+// Returns who the overall winner is
+function winnerIs (humanScore, computerScore) {
+    if (humanScore > computerScore) {
+        return `The winner is YOU! ${humanScore} - ${computerScore}`;
+    } else if (humanScore < computerScore) {
+        return `The winner is NOT YOU! ${humanScore} - ${computerScore}`;
+    } else {
+        return `The game was a TIE! ${humanScore} - ${computerScore}`;
+    }
+}
+
+// The loop that runs the game 5 times
+for (let i=0; i < 5; i++) {
+
+        // stores the human choice and computer choice
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+
+        playRound(humanSelection, computerSelection);
+        console.log(humanScore);
+        console.log(computerScore);
+}
+
+console.log(winnerIs(humanScore, computerScore));
 
 
-playRound(humanSelection, computerSelection);
-console.log(humanScore);
-console.log(computerScore);
